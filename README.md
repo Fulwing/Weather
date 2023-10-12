@@ -90,3 +90,30 @@ git clone https://github.com/Fulwing/RPI-to-IOT.git
 Now, your Raspberry Pi is set up with Python installed, the Adafruit DHT Sensor Library, and the AWS IoT Device SDK.
 
 ## Installation
+
+1. Go to [AWS IoT](https://aws.amazon.com/) to register an account for IoT uses.
+
+### Step 7: Hardware Setup
+
+1. Power up your Raspberry Pi.
+
+2. Connect the DHT11 sensor to the Raspberry Pi using a breadboard and jumper wires.
+
+   - Connect the Signal Pin to GPIO pin 4 of the Pi.
+   - Connect the Negative pin of the sensor to GPIO pin 6 of the Pi.
+   - Connect the Vcc pin of the sensor to GPIO pin 2 of the Pi.
+
+   ![Hardware Setup](https://camo.githubusercontent.com/cc42189988c7245bace156da1bf676673c9311d21c5274b8c90b5a96248aadf0/687474703a2f2f7777772e636972637569746261736963732e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031352f31322f486f772d746f2d53657475702d7468652d44485431312d6f6e2d7468652d5261737062657272792d50692d466f75722d70696e2d44485431312d576972696e672d4469616772616d2e706e67)
+
+3. Use a 10K Ohm pull-up resistor connected between the Vcc and signal lines.
+
+### Step 8: Test the Connection
+
+To check the connection, run the sample program:
+
+```bash
+sudo python testDHT11.py
+```
+
+The output should show temperature in degrees Celsius and humidity percentage readings in the console every 5 seconds iteratively. Please note that the actual GPIO pin numbers and sensor types may vary based on your specific setup. Adjust the information accordingly.
+

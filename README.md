@@ -152,7 +152,7 @@ The output should show temperature in degrees Celsius and humidity percentage re
 
 ### Step 4: Testing
 
-1. Go to the `RPI-to-IOT` directory.
+1. Go to the `RPI-to-IOT` directory that you just cloned.
 
 2. Open `DataToIot.py` and modify the AWS IoT configuration:
 

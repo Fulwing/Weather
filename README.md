@@ -194,4 +194,4 @@ The output should show temperature in degrees Celsius and humidity percentage re
 
     - Subscribe to the topic `awsiot/dht22`.
 
-6. Every 10 seconds, you should see messages showing on the button, displaying temperatures, humidity, and sensor IDs.
+6. Every 10 seconds, you should see messages showing on the buttom, displaying temperatures, humidity, and sensor IDs.

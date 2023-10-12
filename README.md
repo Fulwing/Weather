@@ -35,11 +35,56 @@ To build the weather station, you'll need the following hardware:
   - SIM&NAT Male to Female (assuming it's a specific cable)
   - DHT22 Sensor
   - Micro SD Card
-## Installation
-...
 
 ## Installation
 
-1. Clone the repository.
-   ```bash
-   git clone https://github.com/your-username/weather-station.git
+### Step 1: Set up your Raspberry Pi
+
+1. Connect your Raspberry Pi to the keyboard, mouse, and monitor.
+
+2. Choose the Raspberry Pi OS during the setup process.
+
+### Step 2: Install Python
+
+```bash
+sudo apt-get update
+sudo apt-get install python3
+```
+
+### Step 3: Get Adafruit Python DHT Sensor Library
+
+```bash
+sudo apt-get update
+sudo apt-get install python3-pip
+sudo python3 -m pip install --upgrade pip setuptools wheel
+```
+
+-Install with pip
+
+```bash
+sudo pip3 install Adafruit_DHT
+```
+
+-Compile and install from the repository
+
+```bash
+git clone https://github.com/adafruit/Adafruit_Python_DHT.git
+cd Adafruit_Python_DHT
+sudo apt-get update
+sudo apt-get install build-essential python-dev python-openssl
+sudo python setup.py install
+```
+
+### Step 4: Install AWS IoT Device SDK for Python
+
+```bash
+pip install AWSIoTPythonSDK
+```
+
+### Step 5: Clone the Git repository
+
+```bash
+git clone https://github.com/Hariharnath-Paduchuru/Raspberry_Pi_3-DHT-Sensor-AWS_IoT
+```
+
+Now, your Raspberry Pi is set up with Python installed, the Adafruit DHT Sensor Library, and the AWS IoT Device SDK.

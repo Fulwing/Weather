@@ -128,7 +128,7 @@ The output should show temperature in degrees Celsius and humidity percentage re
 3. On your Raspberry Pi console, try to ping the AWS IoT endpoint:
 
     ```bash
-    ping a6xrtryqth6zs-ats.iot.us-east-1.amazonaws.com
+    ping xxxxxxxxx.xxxxxx.amazonaws.com
     ```
 
     If you receive a signal back, your connection is successful. Otherwise, check your network settings.

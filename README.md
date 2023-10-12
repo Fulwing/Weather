@@ -42,7 +42,7 @@ To build the weather station, you'll need the following hardware and software:
 
 1. Connect your Raspberry Pi to the keyboard, mouse, and monitor.
 
-2. Open Raspberry Pi and follow the [setup](https://raspberrypihq.com/booting-the-raspberry-pi-for-the-first-time/)
+2. Open Raspberry Pi and follow the [setup]([https://raspberrypihq.com/booting-the-raspberry-pi-for-the-first-time/](https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/4))
 
 ### Step 2: Install Python
 

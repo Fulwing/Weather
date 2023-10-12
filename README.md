@@ -97,7 +97,7 @@ Now, your Raspberry Pi is set up with Python installed, the Adafruit DHT Sensor 
 
 1. Power up your Raspberry Pi.
 
-2. Connect the DHT11 sensor to the Raspberry Pi using a breadboard and jumper wires.
+2. Connect the DHT11 sensor to the Raspberry Pi using a breadboard and SIM&NAT wires.
 
    - Connect the Signal Pin to GPIO pin 4 of the Pi.
    - Connect the Negative pin of the sensor to GPIO pin 6 of the Pi.
@@ -106,6 +106,8 @@ Now, your Raspberry Pi is set up with Python installed, the Adafruit DHT Sensor 
    ![Hardware Setup](https://camo.githubusercontent.com/cc42189988c7245bace156da1bf676673c9311d21c5274b8c90b5a96248aadf0/687474703a2f2f7777772e636972637569746261736963732e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031352f31322f486f772d746f2d53657475702d7468652d44485431312d6f6e2d7468652d5261737062657272792d50692d466f75722d70696e2d44485431312d576972696e672d4469616772616d2e706e67)
 
 3. Use a 10K Ohm pull-up resistor connected between the Vcc and signal lines.
+
+![Pins](https://camo.githubusercontent.com/d569a752e89ccc2590364a8c197b10a54a6211ff58187a6dd0c44109082dfcbb/68747470733a2f2f7777772e72617370626572727970692d7370792e636f2e756b2f77702d636f6e74656e742f75706c6f6164732f323031322f30362f5261737062657272792d50692d4750494f2d4c61796f75742d4d6f64656c2d422d506c75732d726f74617465642d32373030783930302e706e67)
 
 ### Step 8: Test the Connection
 

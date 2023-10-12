@@ -84,7 +84,7 @@ pip install AWSIoTPythonSDK
 ### Step 5: Clone the Git repository
 
 ```bash
-git clone https://github.com/Hariharnath-Paduchuru/Raspberry_Pi_3-DHT-Sensor-AWS_IoT
+git clone https://github.com/Fulwing/RPI-to-IOT.git
 ```
 
 Now, your Raspberry Pi is set up with Python installed, the Adafruit DHT Sensor Library, and the AWS IoT Device SDK.

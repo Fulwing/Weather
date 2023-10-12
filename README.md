@@ -89,4 +89,4 @@ git clone https://github.com/Fulwing/RPI-to-IOT.git
 
 Now, your Raspberry Pi is set up with Python installed, the Adafruit DHT Sensor Library, and the AWS IoT Device SDK. You could run Test.py to test if sensor is working, you could get the temperature and humidity printed out
 
-## Install
+## Installation

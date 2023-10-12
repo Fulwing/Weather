@@ -109,7 +109,7 @@ Now, your Raspberry Pi is set up with Python installed, the Adafruit DHT Sensor 
 
 ![Pins](https://camo.githubusercontent.com/d569a752e89ccc2590364a8c197b10a54a6211ff58187a6dd0c44109082dfcbb/68747470733a2f2f7777772e72617370626572727970692d7370792e636f2e756b2f77702d636f6e74656e742f75706c6f6164732f323031322f30362f5261737062657272792d50692d4750494f2d4c61796f75742d4d6f64656c2d422d506c75732d726f74617465642d32373030783930302e706e67)
 
-### Step 8: Test the Connection
+### Step 2: Test the Connection
 
 To check the connection, run the sample program:
 

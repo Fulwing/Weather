@@ -169,7 +169,7 @@ The output should show temperature in degrees Celsius and humidity percentage re
 
     - For the `host`, get it from [AWS IoT Console](https://us-east-1.console.aws.amazon.com/iot/home?region=us-east-1#/home) under settings, you will see Endpoint, which is your host.
 
-    - Unzip and put the downloaded files from the connection kit under the `RPI-to-IOT` directory.
+    - Unzip and put the downloaded files from the connection kit under the `RPI-to-IOT` directory, and enter the path correctly for those certificates.
 
 3. Change the Thing name to the name you gave to your thing. Don't change the Client ID.
 

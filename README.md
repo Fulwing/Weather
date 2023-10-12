@@ -119,3 +119,79 @@ sudo python testDHT11.py
 
 The output should show temperature in degrees Celsius and humidity percentage readings in the console every 5 seconds iteratively. Please note that the actual GPIO pin numbers and sensor types may vary based on your specific setup. Adjust the information accordingly.
 
+### Step 3: AWS IoT Configuration
+
+1. Go to [AWS IoT Console](https://us-east-1.console.aws.amazon.com/iot/home?region=us-east-1#/home).
+
+2. Select **Connect Device** and note the code on the page.
+
+3. On your Raspberry Pi console, try to ping the AWS IoT endpoint:
+
+    ```bash
+    ping a6xrtryqth6zs-ats.iot.us-east-1.amazonaws.com
+    ```
+
+    If you receive a signal back, your connection is successful. Otherwise, check your network settings.
+
+4. Create a new thing:
+
+    - Give it a name.
+    - Choose **Linux SDK**.
+    - Choose **Python**.
+
+5. Download the connection kit, unzip it, and run the following commands:
+
+    ```bash
+    chmod +x start.sh
+    ./start.sh
+    ```
+
+    You should see messages pop up on your AWS IoT setup page.
+
+6. Next Step: Testing
+
+### Step 10: Testing
+
+1. Go to the `RPI-to-IOT` directory.
+
+2. Open `DataToIot.py` and modify the AWS IoT configuration:
+
+    ```python
+    # AWS IoT Configuration
+    useWebsocket = False
+    host = "xxxxx.amazonaws.com"
+    rootCAPath = "root-CA.pem"
+    certificatePath = "xxxxx-certificate.pem.crt"
+    privateKeyPath = "xxxxx-private.pem.key"
+    Client_ID = "RaspberryPi"
+    AWS_IOT_MY_THING_NAME = "Your Thing Name"
+    ```
+
+    - For the `host`, get it from [AWS IoT Console](https://us-east-1.console.aws.amazon.com/iot/home?region=us-east-1#/home) under settings.
+
+    - Put the downloaded files from the connection kit under the `RPI-to-IOT` directory.
+
+3. Change the Thing name to the name you gave to your thing. Don't change the Client ID.
+
+4. Run the Python file:
+
+    ```bash
+    sudo python DataToIOT.py
+    ```
+
+    You should see the Raspberry Pi sending data and sleeping for 10 seconds.
+
+5. In the AWS IoT Console, go to **MQTT Test Client**:
+
+    - Enter the topic, which is in the `# Topic configuration` in the Python file:
+
+    ```python
+    # Topic configuration
+    topic = "awsiot/dht22"
+    delay_sec = 10
+    sensor_id = 'DHT22_xxx'
+    ```
+
+    - Subscribe to the topic `awsiot/dht22`.
+
+6. Every 10 seconds, you should see messages showing on the button, displaying temperatures, humidity, and sensor IDs.

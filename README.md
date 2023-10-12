@@ -93,7 +93,7 @@ Now, your Raspberry Pi is set up with Python installed, the Adafruit DHT Sensor 
 
 1. Go to [AWS IoT](https://aws.amazon.com/) to register an account for IoT uses.
 
-### Step 7: Hardware Setup
+### Step 1: Hardware Setup
 
 1. Power up your Raspberry Pi.
 

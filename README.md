@@ -150,7 +150,7 @@ The output should show temperature in degrees Celsius and humidity percentage re
 
 6. Next Step: Testing
 
-### Step 10: Testing
+### Step 4: Testing
 
 1. Go to the `RPI-to-IOT` directory.
 

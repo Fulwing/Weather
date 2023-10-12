@@ -23,17 +23,20 @@ This project is a step-by-step guide to help you build your own weather station 
 
 ## Requirements
 
-List the hardware and software requirements needed to build the weather station.
+To build the weather station, you'll need the following hardware:
 
 - Hardware:
-  - Arduino board
-  - [List other sensors]
-  - [Any other hardware]
-
-- Software:
-  - Arduino IDE
-  - Python (for web upload script)
-  - [Any other software]
+  - Raspberry Pi 3 or higher
+  - HDMI Cable
+  - Keyboard
+  - Mouse
+  - Monitor
+  - Breadboard
+  - SIM&NAT Male to Female (assuming it's a specific cable)
+  - DHT22 Sensor
+  - Micro SD Card
+## Installation
+...
 
 ## Installation
 

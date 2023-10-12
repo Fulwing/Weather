@@ -23,7 +23,7 @@ This project is a step-by-step guide to help you build your own weather station 
 
 ## Requirements
 
-To build the weather station, you'll need the following hardware:
+To build the weather station, you'll need the following hardware and software:
 
 - Hardware:
   - Raspberry Pi 3 or higher
@@ -36,7 +36,7 @@ To build the weather station, you'll need the following hardware:
   - DHT22 Sensor
   - Micro SD Card
 
-## Installation
+- Software:
 
 ### Step 1: Set up your Raspberry Pi
 
@@ -87,4 +87,6 @@ pip install AWSIoTPythonSDK
 git clone https://github.com/Fulwing/RPI-to-IOT.git
 ```
 
-Now, your Raspberry Pi is set up with Python installed, the Adafruit DHT Sensor Library, and the AWS IoT Device SDK.
+Now, your Raspberry Pi is set up with Python installed, the Adafruit DHT Sensor Library, and the AWS IoT Device SDK. You could run Test.py to test if sensor is working, you could get the temperature and humidity printed out
+
+## Install

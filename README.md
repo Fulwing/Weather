@@ -355,7 +355,7 @@ String apiUrl = "YOUR_API_ENDPOINT_FROM_AWS_API_GATEWAY"; // Put your API endpoi
 
 4. Run the Spring Boot project.
   
-5. Open the browser and go to [http://localhost:8080/](http://localhost:8080/).
+5. Open the browser and go to [http://localhost:8080/](http://localhost:8080/)
 
    - If you can't load, ensure your port is 8080 or go to the port you've set for Tomcat.
 

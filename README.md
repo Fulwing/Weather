@@ -563,7 +563,7 @@ Now, your website is accessible via your registered domain.
 
 3. Leave the protocol and port the same. For Routing actions, click **Forward to Target Groups**.
 
-4. Create a target group with the appropriate settings.
+4. Create a target group with the appropriate settings, Protocol - HTTP, Port - 8080, if you change your Tomcat settings change the port here too, and choose the same VPC as the load balancer.
 
 5. Check your instance and click **Include as Pending Below**.
 

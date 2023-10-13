@@ -415,3 +415,49 @@ Now, you have successfully set up the website to display temperature, humidity, 
 11. The website is now running. Open your browser and go to your instance's public IPv4, xx.xx.xx.xxx:8080, change the port if you set it to a different one.
 
 Now, you have successfully deployed your website on Amazon EC2!
+
+### Step 9: Add a Domain to Your Website
+
+1. Go to [Amazon Route 53](https://us-east-1.console.aws.amazon.com/route53/v2/home?region=us-east-1#Dashboard).
+
+2. Register a domain:
+   - Choose the domain you'd like to have.
+   - Follow the steps to buy your domain.
+
+3. After purchasing, go to **Hosted Zones**:
+   - Click on your hosted zone (your domain name).
+   - Click **Create Record**:
+      - For record name, enter `www`.
+      - Record type: CNAME.
+      - Value: Put in your domain like `xxxxx.com`.
+      - Leave other settings as default.
+      - Click **Create Records**.
+
+4. Create another record:
+   - Leave subdomain empty.
+   - Record type: A.
+   - Value: Put in your public IPv4 (found in your EC2 instance).
+   - Click **Create Records**.
+
+5. View your records. Note the type called NS, with four values (your name servers).
+
+6. On the left sidebar, go to **Registered Domains**:
+   - Click on your domain.
+   - Actions > Edit Name Servers.
+   - Copy all four values in your name server:
+     ```
+     xx-xxx.awsdns-xx.net
+     ns-xx.awsdns-xx.org
+     ns-xx.awsdns-xx.com
+     ns-xx.awsdns-xx.co.uk
+     ```
+     (You don't need the period at the end of each one.)
+
+7. Name server updates might take some time to register. Wait for a while.
+
+8. After it's done, check the dashboard for the message "Name server update successful."
+
+9. Go to your domain, and you'll see that your website now has a domain!
+
+Now, your website is accessible via your registered domain.
+

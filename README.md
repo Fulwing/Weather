@@ -367,3 +367,49 @@ String apiUrl = "YOUR_API_ENDPOINT_FROM_AWS_API_GATEWAY"; // Put your API endpoi
    - Add more functions as needed.
 
 Now, you have successfully set up the website to display temperature, humidity, or climate data from your weather station.
+
+### Step 8: Deploy Website on Amazon EC2
+
+1. Go to the [Amazon EC2 Console](https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#Home:).
+
+2. Click **Launch Instance**:
+   - Give it a name.
+   - Choose Amazon Linux.
+   - Select t2.micro for the instance type.
+   - Create a new key pair (choose RSA and .pem). Save the key pair securely.
+
+3. Click **Launch Instance** and wait for the instance to start.
+
+4. Click on your EC2 instance ID, then go to **Security** > **Security Groups** > **Edit Inbound Rules**:
+   - Ensure 80, 443, 22 are all `0.0.0.0/0`.
+   - Add a custom TCP for your Tomcat port (e.g., 8080) and set it to `0.0.0.0/0`.
+
+5. Go to your Spring Boot project, clean, and then package. Locate the JAR file (e.g., `TempHum-0.0.1-SNAPSHOT.jar`) in the `target` folder.
+
+6. Download and install [WinSCP](https://winscp.net/eng/index.php), then open it. Start a new tab:
+   - File protocol: SFTP.
+   - Host name: Copy the Public IPv4 DNS from your EC2 instance.
+   - Port number: 22.
+   - User name: ec2-user.
+   - Advanced > Authentication: Choose the `.pem` key pair and convert it.
+   - Login.
+
+7. Upload the JAR file to `/home/ec2-user` on the server.
+
+8. Open Git Bash in the folder containing the `.pem` key file, or use the EC2 instance Connect in the AWS Console.
+
+9. Connect to the server using SSH:
+   ```bash
+   ssh -i "your-key.pem" ec2-user@your-ec2-dns.compute-1.amazonaws.com
+   ```
+   - Answer yes when prompted.
+    
+10. In the server terminal, run the JAR file in the background:
+    ```bash
+    sudo nohup java -jar TempHum-0.0.1-SNAPSHOT.jar &
+    ```
+    - Replace TempHum-0.0.1-SNAPSHOT.jar with your JAR file name.
+
+11. The website is now running. Open your browser and go to your instance's public IPv4, xx.xx.xx.xxx:8080, change the port if you set it to a different one.
+
+Now, you have successfully deployed your website on Amazon EC2!

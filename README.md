@@ -31,13 +31,27 @@ This project is a step-by-step guide to help you build your own weather station 
     - [Forward to Target Groups for HTTPS](#forward-to-target-groups-for-https)
     - [Configure Target Groups and Health Checks](#configure-target-groups-and-health-checks)
 
-## Features
+### Features
 
-- **Customizable Sensors:** Choose the sensors that fit your needs, such as temperature, humidity, and atmospheric pressure.
+1. **Real-time Weather Display:**
+   - View accurate and up-to-date temperature readings.
+   - Choose between Celsius and Fahrenheit units for a personalized experience.
+    
+2. **Humidity Monitoring:**
+   - Keep an eye on humidity levels in your environment.
+   - Understand and analyze changes in humidity for a comprehensive weather overview.
 
-- **Data Logging:** Collect and store weather data over time.
+3. **Customizable Sensors:**
+   - Select and integrate sensors based on your preferences.
+   - Tailor your weather station to monitor specific climate aspects.
 
-- **Web Upload:** Share your weather data on a website for easy access.
+4. **Data Logging and Analysis:**
+   - Collect and store historical weather data for in-depth analysis.
+   - Explore trends and patterns to gain a deeper understanding of your local climate.
+
+5. **Web Upload and Visualization:**
+   - Share your weather data effortlessly on a user-friendly website.
+   - Visualize trends through interactive charts and graphs.
 
 ## Environment Setup
 

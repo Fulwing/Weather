@@ -51,7 +51,7 @@ This project is a step-by-step guide to help you build your own weather station 
 
 5. **Web Upload and Visualization:**
    - Share your weather data effortlessly on a user-friendly website.
-   - Visualize trends through interactive charts and graphs.
+   - Visualize weather data through dynamically presented information on web pages.
 
 6. **Raspberry Pi Data Hub:**
    - Utilize the powerful Raspberry Pi as the central hub for collecting and processing weather data.

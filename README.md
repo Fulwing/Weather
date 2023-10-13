@@ -403,6 +403,8 @@ Now, you have successfully set up the website to display temperature, humidity, 
    ssh -i "your-key.pem" ec2-user@your-ec2-dns.compute-1.amazonaws.com
    ```
    - Answer yes when prompted.
+  
+    Or go to your Instance click `Connect` and leave everything in default then click `Connect` again
     
 10. In the server terminal, run the JAR file in the background:
     ```bash

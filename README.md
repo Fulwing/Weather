@@ -8,8 +8,8 @@ This project is a step-by-step guide to help you build your own weather station 
 
 - [Features](#features)
 - [Environment Setup](#environment-setup)
-  -[What You Need](#what-you-need)
-  -[Raspberry Enviorment](#raspberry-enviorment)
+  - [What You Need](#what-you-need)
+  - [Raspberry Enviorment](#raspberry-enviorment)
 - [Build Step By Step](#build-step-by-step)
   - [Step 1: Hardware Setup](#step-1-hardware-setup)
   - [Step 2: Test the Connection](#step-2-test-the-connection)

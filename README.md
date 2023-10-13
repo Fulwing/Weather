@@ -121,7 +121,7 @@ The output should show temperature in degrees Celsius and humidity percentage re
 
 ### Step 3: AWS IoT Configuration
 
-1. Go to [AWS IoT Console](https://us-east-1.console.aws.amazon.com/iot/home?region=us-east-1#/home).
+1. Go to [AWS IoT Core Console](https://us-east-1.console.aws.amazon.com/iot/home?region=us-east-1#/home).
 
 2. Select **Connect Device** and note the code on the page.
 

@@ -8,7 +8,7 @@ This project is a step-by-step guide to help you build your own weather station 
 
 - [Features](#features)
 - [Requirements](#requirements)
-- [Installation](#installation)
+- [Setup](#installation)
   - [Step 1: Hardware Setup](#step-1-hardware-setup)
   - [Step 2: Test the Connection](#step-2-test-the-connection)
   - [Step 3: AWS IoT Configuration](#step-3-aws-iot-configuration)
@@ -99,7 +99,7 @@ git clone https://github.com/Fulwing/RPI-to-IOT.git
 
 Now, your Raspberry Pi is set up with Python installed, the Adafruit DHT Sensor Library, and the AWS IoT Device SDK.
 
-## Installation
+## Setup
 
 1. Go to [AWS IoT](https://aws.amazon.com/) to register an account for IoT uses.
 

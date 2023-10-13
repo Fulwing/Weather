@@ -30,9 +30,6 @@ This project is a step-by-step guide to help you build your own weather station 
     - [Redirect HTTP to HTTPS](#redirect-http-to-https)
     - [Forward to Target Groups for HTTPS](#forward-to-target-groups-for-https)
     - [Configure Target Groups and Health Checks](#configure-target-groups-and-health-checks)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 

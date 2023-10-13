@@ -136,8 +136,8 @@ The output should show temperature in degrees Celsius and humidity percentage re
 4. Create a new thing:
 
     - Give it a name.
-    - Choose **Linux SDK**.
-    - Choose **Python**.
+    - Choose **Linux**.
+    - Choose **Python SDK**.
 
 5. Download the connection kit, unzip it, and run the following commands:
 

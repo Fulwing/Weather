@@ -239,3 +239,95 @@ The output should show temperature in degrees Celsius and humidity percentage re
 8. Review your settings and click **Create**.
 
 Now, you have successfully set up a rule to save the data passed from the Raspberry Pi into DynamoDB.
+
+### Step 6: Create Lambda Function for API
+
+1. Go to the [AWS Lambda Console](https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions) and click on **Functions**.
+
+2. Create a new function:
+
+    - Click **Create function**.
+    - Give it a name.
+    - Choose **Node.js 18.x** as the runtime.
+    - For architecture, choose **x86_64**.
+    - Click **Create function**.
+
+3. In the function page, go to `index.mjs` and replace the code with:
+
+```javascript
+import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
+import {
+  DynamoDBDocumentClient,
+  ScanCommand,
+} from "@aws-sdk/lib-dynamodb";
+
+const client = new DynamoDBClient({});
+const dynamo = DynamoDBDocumentClient.from(client);
+const tableName = "TempHum";
+
+export const handler = async (event, context) => {
+  let body;
+  let statusCode = 200;
+  const headers = {
+    "Content-Type": "application/json",
+  };
+
+  try {
+    body = await dynamo.send(
+      new ScanCommand({ TableName: tableName })
+    );
+    body = body.Items[0].payload;
+  } catch (err) {
+    statusCode = 400;
+    body = err.message;
+  } finally {
+    body = JSON.stringify(body);
+  }
+
+  return {
+    statusCode,
+    body,
+    headers,
+  };
+};
+```
+
+4. Configure permissions:
+   
+    - Go to the Lambda script page, click on **Configuration** > **Permissions**.
+    - Click on the role name, then go to the role page.
+    - Add DynamoDB permission to the role.
+   **Note:** Permission changes may take up to 10 minutes to take effect. If you encounter a permission error after making changes, wait for a while and then test again.
+
+5. Set up an API Gateway:
+  
+    - Go to the [AWS API Gateway Console](https://us-east-1.console.aws.amazon.com/apigateway/main/apis?region=us-east-1).
+    - Click **Create API**.
+    - Choose **HTTP API**.
+    - Give it a name and click **Next**.
+    - Configure routes later, click **Next**.
+    - Leave the default settings, click **Next**.
+    - Review your settings and click **Create**.
+
+6. Configure API routes:
+     - Choose the API you just created.
+     - On the left sidebar, go to **Develop** > **Routes**.
+     - Click **Create**.
+     - Choose the method (e.g., GET) and give it a name (e.g., `/getdata`).
+     - Click **Create**.
+
+7. Attach Lambda integration:
+
+     - Go back to the Routes page, click on the route you just created.
+     - Click **Attach Integration**.
+     - Click **Create and attach an integration**.
+     - Choose **Lambda function** as the integration type.
+     - Choose the Lambda function you just created.
+     - Click **Create**.
+
+8. Get the API endpoint:
+     - You can find the API endpoint in the Lambda function overview, under the **Triggers** section.
+     - Alternatively, go to the API Gateway page, select your API, and find the **Invoke URL**.
+
+Now, you have successfully created an API to get data from the database using AWS Lambda and API Gateway.
+

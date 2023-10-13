@@ -327,7 +327,7 @@ export const handler = async (event, context) => {
 
 8. Get the API endpoint:
      - You can find the API endpoint in the Lambda function overview, under the **Triggers** section.
-     - Alternatively, go to the API Gateway page, select your API, and find the **Invoke URL**.
+     - Alternatively, go to the API Gateway page, select your API, and find the **Invoke URL** + the route you just created.
 
 Now, you have successfully created an API to get data from the database using AWS Lambda and API Gateway.
 

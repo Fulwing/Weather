@@ -9,7 +9,7 @@ This project is a step-by-step guide to help you build your own weather station 
 - [Features](#features)
 - [Environment Setup](#environment-setup)
   - [What You Need](#what-you-need)
-  - [Raspberry Enviorment](#raspberry-enviorment)
+  - [RaspberryPi Environment](#raspberrypi-environment)
 - [Build Step By Step](#build-step-by-step)
   - [Step 1: Hardware Setup](#step-1-hardware-setup)
   - [Step 2: Test the Connection](#step-2-test-the-connection)
@@ -52,7 +52,7 @@ To build the weather station, you'll need the following hardware and software:
   - DHT22 Sensor
   - Micro SD Card
 
-### Raspberry Enviorment
+### RaspberryPi Environment
 
 #### Step 1: Set up your Raspberry Pi
 

@@ -195,3 +195,47 @@ The output should show temperature in degrees Celsius and humidity percentage re
     - Subscribe to the topic `awsiot/dht22`.
 
 6. Every 10 seconds, you should see messages showing on the bottom, displaying temperatures, humidity, and sensor IDs.
+
+
+### Step 5: Store Data in Database
+
+1. In the AWS IoT Console, navigate to **Message Routing** and then **Rules**.
+
+2. Select **Create Rule**:
+
+    - Give it a name and description (e.g., "Saving data to database").
+    - For SQL statement, use either:
+        - `SELECT * FROM 'awsiot/dht22'` (to store all data)
+        - `SELECT Temperature, Pi_timestamp, Humidity FROM 'awsiot/dht22'` (to store specific fields)
+        - Adjust the SQL statement based on your data.
+
+3. For Rule actions, choose **DynamoDB**.
+
+4. Create a DynamoDB table:
+
+    - Click **Create DynamoDB table**.
+    - Give it a name.
+    - For the partition key, use `Pi_timestamp`.
+    - Optionally, add a sort key if needed.
+    - Leave the default settings and click **Create table**.
+
+5. After creating the table, go back to the IoT rule page.
+
+6. Select your table:
+
+    - For the partition key, enter the partition key you just created (e.g., `Pi_timestamp`).
+    - For the value, put in `$Pi_timestamp`.
+    - Enter the sort key if you added one.
+    - Choose a role; if you don't have one, create a new role.
+
+7. To create a new role and add permissions:
+
+    - Create a new role if needed.
+    - Add a policy to this role; give DynamoDB access.
+    - Click **View** after creating your role.
+    - Click **Add Permissions** > **Attach Policies**.
+    - Add permissions to this role, like DynamoDB full access.
+
+8. Review your settings and click **Create**.
+
+Now, you have successfully set up a rule to save the data passed from the Raspberry Pi into DynamoDB.

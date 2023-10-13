@@ -4,11 +4,21 @@
 
 This project is a step-by-step guide to help you build your own weather station and upload the data to a website. Whether you're a weather enthusiast, a student working on a project, or just curious, this guide will walk you through the process.
 
-## Table of Contents
+# Table of Contents
 
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
+  - [Step 1: Hardware Setup](#step-1-hardware-setup)
+  - [Step 2: Test the Connection](#step-2-test-the-connection)
+  - [Step 3: AWS IoT Configuration](#step-3-aws-iot-configuration)
+  - [Step 4: Testing](#step-4-testing)
+  - [Step 5: Store Data in Database](#step-5-store-data-in-database)
+  - [Step 6: Create Lambda Function for API](#step-6-create-lambda-function-for-api)
+  - [Step 7: Code the Website](#step-7-code-the-website)
+  - [Step 8: Deploy Website on Amazon EC2](#step-8-deploy-website-on-amazon-ec2)
+  - [Step 9: Add a Domain to Your Website](#step-9-add-a-domain-to-your-website)
+  - [Step 10: SSL Certificate and Load Balancer](#step-10-ssl-certificate-and-load-balancer)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)

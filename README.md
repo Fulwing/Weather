@@ -7,8 +7,8 @@ This project is a step-by-step guide to help you build your own weather station 
 # Table of Contents
 
 - [Features](#features)
-- [Requirements](#requirements)
-- [Setup](#setup)
+- [Environment Setup](#environment-setup)
+- [Build Step By Step](#build-step-by-step)
   - [Step 1: Hardware Setup](#step-1-hardware-setup)
   - [Step 2: Test the Connection](#step-2-test-the-connection)
   - [Step 3: AWS IoT Configuration](#step-3-aws-iot-configuration)
@@ -35,7 +35,7 @@ This project is a step-by-step guide to help you build your own weather station 
 
 - **Web Upload:** Share your weather data on a website for easy access.
 
-## Requirements
+## Environment Setup
 
 To build the weather station, you'll need the following hardware and software:
 
@@ -103,7 +103,7 @@ git clone https://github.com/Fulwing/RPI-to-IOT.git
 
 Now, your Raspberry Pi is set up with Python installed, the Adafruit DHT Sensor Library, and the AWS IoT Device SDK.
 
-## Setup
+## Build Step By Step
 
 1. Go to [AWS IoT](https://aws.amazon.com/) to register an account for IoT uses.
 

@@ -8,7 +8,7 @@ This project is a step-by-step guide to help you build your own weather station 
 
 - [Features](#features)
 - [Requirements](#requirements)
-- [Setup](#installation)
+- [Setup](#setup)
   - [Step 1: Hardware Setup](#step-1-hardware-setup)
   - [Step 2: Test the Connection](#step-2-test-the-connection)
   - [Step 3: AWS IoT Configuration](#step-3-aws-iot-configuration)

@@ -462,3 +462,74 @@ Now, you have successfully deployed your website on Amazon EC2!
 
 Now, your website is accessible via your registered domain.
 
+### Step 10: SSL Certificate and Load Balancer
+
+1. Go to [AWS Certificate Manager (ACM)](https://us-east-1.console.aws.amazon.com/acm/home?region=us-east-1#/certificates/list).
+
+2. Click **Request** and choose **Request a public certificate**.
+
+3. Enter your Fully Qualified Domain Name (FQDN) with subdomain (e.g., www.example.com) and without subdomain (e.g., example.com).
+
+4. Choose the validation method as **NS validation - recommended** and key algorithm as **RSA 2048**. Click **Request**.
+
+   _Note: Certificate issuance may take several hours for Amazon to validate your website._
+
+5. Once issued, click on your certificate ID in the list of certificates.
+
+6. Under **Domains**, create records in Route 53. If you see two domains, create records for both.
+
+7. Add the records in Route 53 for verification purposes.
+
+#### Load Balancer Configuration
+
+1. Go to [EC2 > Load Balancers](https://us-east-1.console.aws.amazon.com/ec2/v2/home?region=us-east-1#LoadBalancers:).
+
+2. Click **Create Load Balancer** and select **Application Load Balancer**.
+
+3. Fill in details, including name, scheme, and IP address type.
+
+4. For **Mappings**, select all possible availability zones.
+
+5. For **Listeners and Routing**, set up two listeners: HTTP (Port: 80) and HTTPS (Port: 443). Choose the certificate from ACM.
+
+6. Review the configuration and click **Create Load Balancer**.
+
+#### Redirect HTTP to HTTPS
+
+1. On the Load Balancer page, click on **HTTP:80**.
+
+2. Click the checkbox for listener rules and go to **Actions > Edit rules**.
+
+3. Leave the protocol and port the same. For Routing actions, choose **Redirect to URL**.
+
+4. Set Redirect to URL parts: Protocol - HTTPS, Port - 443, Status code - 301.
+
+5. Click **Save Changes**.
+
+#### Forward to Target Groups for HTTPS
+
+1. Go back to the Load Balancer page and click on **HTTPS:443**.
+
+2. Click the checkbox, then go to **Actions > Edit rules**.
+
+3. Leave the protocol and port the same. For Routing actions, click **Forward to Target Groups**.
+
+4. Create a target group with the appropriate settings.
+
+5. Check your instance and click **Include as Pending Below**.
+
+6. Click **Create Target Group**.
+
+#### Configure Target Groups and Health Checks
+
+1. After creating the target group, go back to the listener page.
+
+2. Choose the target group you just created. Set weight to 1 and leave the security policy as default.
+
+3. For **Certificate source**, choose **From ACM**. Select the certificate.
+
+4. Click **Save Changes**.
+
+Now, when you visit your website, you will have a secure connection with a little lock icon. Your website is now secure and safe!
+
+

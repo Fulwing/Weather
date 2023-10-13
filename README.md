@@ -464,21 +464,21 @@ Now, your website is accessible via your registered domain.
 
 ### Step 10: SSL Certificate and Load Balancer
 
-     - Go to [AWS Certificate Manager (ACM)](https://us-east-1.console.aws.amazon.com/acm/home?region=us-east-1#/certificates/list).
+1. Go to [AWS Certificate Manager (ACM)](https://us-east-1.console.aws.amazon.com/acm/home?region=us-east-1#/certificates/list).
 
-     - Click **Request** and choose **Request a public certificate**.
+2. Click **Request** and choose **Request a public certificate**.
 
-     - Enter your Fully Qualified Domain Name (FQDN) with subdomain (e.g., www.example.com) and without subdomain (e.g., example.com).
+3. Enter your Fully Qualified Domain Name (FQDN) with subdomain (e.g., www.example.com) and without subdomain (e.g., example.com).
 
-     - Choose the validation method as **NS validation - recommended** and key algorithm as **RSA 2048**. Click **Request**.
+4. Choose the validation method as **NS validation - recommended** and key algorithm as **RSA 2048**. Click **Request**.
 
    _Note: Certificate issuance may take several hours for Amazon to validate your website._
 
-     - Once issued, click on your certificate ID in the list of certificates.
+5. Once issued, click on your certificate ID in the list of certificates.
 
-     - Under **Domains**, create records in Route 53. If you see two domains, create records for both.
+6. Under **Domains**, create records in Route 53. If you see two domains, create records for both.
 
-     - Add the records in Route 53 for verification purposes.
+7. Add the records in Route 53 for verification purposes.
 
 #### Load Balancer Configuration
 

@@ -53,6 +53,23 @@ This project is a step-by-step guide to help you build your own weather station 
    - Share your weather data effortlessly on a user-friendly website.
    - Visualize trends through interactive charts and graphs.
 
+6. **Raspberry Pi Data Hub:**
+  - Utilize the powerful Raspberry Pi as the central hub for collecting and processing weather data.
+  - Choose and build your sensors to tailor the station to your specific climate monitoring needs.
+
+7. **AWS Cloud Integration:**
+  - Seamlessly connect your weather station to the AWS cloud for secure data storage and analysis.
+  - Leverage the scalability and reliability of Amazon Web Services to manage and process your weather data.
+
+8. **Amazon EC2 Deployment:**
+  - Deploy a visually appealing website on Amazon EC2 to present your weather data in an accessible and interactive format.
+  - Ensure a seamless user experience with the website hosted on a reliable and scalable EC2 instance.
+
+9. **Secure Domain Access:**
+  - Enhance the accessibility of your weather data with a custom domain registered through Amazon Route 53.
+  - Implement SSL certificates and load balancing to ensure a secure and encrypted connection for users.
+
+
 ## Environment Setup
 
 To build the weather station, you'll need the following hardware and software:

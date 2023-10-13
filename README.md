@@ -423,6 +423,7 @@ Now, you have successfully deployed your website on Amazon EC2!
 2. Register a domain:
    - Choose the domain you'd like to have.
    - Follow the steps to buy your domain.
+   - Registering the domain may take some time, so please be patient and wait for the process to complete.
 
 3. After purchasing, go to **Hosted Zones**:
    - Click on your hosted zone (your domain name).

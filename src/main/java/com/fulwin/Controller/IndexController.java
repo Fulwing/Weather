@@ -25,8 +25,8 @@ public class IndexController {
 
         //Temperature Humidity Part
 
-        String WEATHER_API_URL = "https://9oc0mrwy7l.execute-api.us-east-1.amazonaws.com/getData";
-        String apiUrl = "https://tgpp5hp475.execute-api.us-east-1.amazonaws.com/getTempHumData";
+        String WEATHER_API_URL = "https://9oc0mrwy7l.execute-api.us-east-1.amazonaws.com/getData"; //This is my API data that will include all the climate data.
+        String apiUrl = "YOUR_API_ENDPOINT_FROM_AWS_API_GATEWAY";
         String tempJsonResponse = restTemplate.getForObject(apiUrl, String.class);
         String weatherJsonResponse = restTemplate.getForObject(WEATHER_API_URL, String.class);
         assert tempJsonResponse != null;

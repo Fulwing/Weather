@@ -331,3 +331,39 @@ export const handler = async (event, context) => {
 
 Now, you have successfully created an API to get data from the database using AWS Lambda and API Gateway, when you go to your API endpoint, you should see data as a JSON on your browser.
 
+
+### Step 7: Code the Website
+
+1. Clone the Spring Boot project:
+
+```bash
+git clone https://github.com/Fulwing/Weather.git
+```
+2. Open the project and navigate to
+`src/main/java/com/fulwin/controller/IndexController.java`
+
+3. Update the API endpoint:
+
+```java
+// Temperature Humidity Part
+String WEATHER_API_URL = "https://9oc0mrwy7l.execute-api.us-east-1.amazonaws.com/getData"; // This is my API data that includes all climate data.
+String apiUrl = "YOUR_API_ENDPOINT_FROM_AWS_API_GATEWAY"; // Put your API endpoint here.
+```
+- Use the provided API or register at [Visual Crossing Weather API](https://www.visualcrossing.com/).
+- Choose API, language HTTP, output JSON, and select only current. Copy and paste the URL into `WEATHER_API_URL`.
+- 1000 usage of API per day, use it wisely!
+
+4. Run the Spring Boot project.
+  
+5. Open the browser and go to [http://localhost:8080/](http://localhost:8080/).
+
+   - If you can't load, ensure your port is 8080 or go to the port you've set for Tomcat.
+
+5. You should see temperature, humidity, or climate data on the webpage.
+
+6. Customize the project:
+
+   - Change pictures in `src/main/resources/static/images`.
+   - Add more functions as needed.
+
+Now, you have successfully set up the website to display temperature, humidity, or climate data from your weather station.
